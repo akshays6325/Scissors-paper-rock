@@ -1,0 +1,60 @@
+//this code is written in Jscript.
+
+var userChoice;
+var computerChoice=Math.random();
+console.log(userChoice);
+var game=function(userChoice,computerChoice){
+    if (userChoice.length===4){
+       if (0.67<=computerChoice<=1)
+        {
+            console.log("user wins");
+        }
+        else
+        {
+            if(0.34<=computerChoice<=0.66){
+                console.log("computer wins");
+            }
+            else{
+                console.log("tie");
+            }
+        }
+    }
+    else{
+        if(userChoice.length===8){
+            if (0.67<=computerChoice.length<=1){
+                console.log("tie both chose scissor");
+            }
+            else{
+                if(0.34<=computerChoice<=0.66){
+                console.log("user wins");
+                }
+                else{
+                console.log("computer wins");
+                }
+            }
+        }
+        else{
+             if (0<=computerChoice<=0.33){
+                console.log("user wins");
+            }
+            else{
+                if(0.67<=computerChoice.length<=1){
+                console.log("computer wins");
+                }
+                else{
+                    console.log("tie both chose rock");
+                }
+            }
+        }
+    }
+};
+confirm("start game");
+confirm("you can choose rock,scissors and paper");
+userChoice=prompt("users choice");
+game(userChoice,computerChoice);
+
+
+
+            
+            
+            
